@@ -24,6 +24,13 @@ for i in range(list_size):
     bush.append(randint(1, 9))
     print('Урожайность кустa', i+1, '=', bush[i])
 maxi=0
-for i in range(list_size):
-    if bush[i]+bush[i+1]+bush[i+2]>maxi:
-        maxi=bush[i]+bush[i+1]+bush[i+2]
+for i in range(2, list_size):
+    if bush[i]+bush[i-1]+bush[i-2] > maxi:
+        maxi = bush[i]+bush[i-1]+bush[i-2]
+    if i==list_size-2 and bush[i]+bush[i+1]+bush[i-(list_size-2)]>maxi:
+        maxi = bush[i]+bush[i+1]+bush[i-(list_size-2)]
+    if i == list_size-1 and bush[i]+bush[(i-list_size-1)]+bush[i-(list_size-2)] > maxi:
+        maxi = bush[i]+bush[i-(list_size-1)]+bush[i-(list_size-2)]
+print(maxi)
+
+
