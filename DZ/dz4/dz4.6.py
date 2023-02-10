@@ -29,7 +29,7 @@ print('Исходные элементы последовательности �
 unique_bunch_a = (set(spisok_a))
 unique_bunch_b = (set(spisok_b))
 print()
-print('Уникальные элементы последовательности №2', '   ', unique_bunch_a, end='')
+print('Уникальные элементы последовательности №1', '   ', unique_bunch_a, end='')
 print()
 print('Уникальные элементы последовательности №2', '   ', unique_bunch_b, end='')
 intersection_list = unique_bunch_a.intersection(unique_bunch_b)
