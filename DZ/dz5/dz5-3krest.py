@@ -1,11 +1,19 @@
 #dz 5.3
 #Создайте программу для игры в ""Крестики-нолики"".
-size=3
-playing_field=[[1,2,3],[4,5,6],[7,8,9]]
-for i in range(0, len(playing_field)):
-    for j in range(0, len(playing_field)):
-        print(playing_field[i][j], end='  ')
-    print()
-    
-print(playing_field)
-    
+from random import randint
+from funk import *
+
+board=list(range(1,10))  
+print()  
+board_play(board)
+
+player_one = name()
+player_two = name()
+
+temp=0
+temp=sequence(temp) 
+if temp==0:
+    print('Первым ходит игрок:', player_one,'и играет крестиками "x" ')
+else:
+    print('Первым ходит игрок:', player_two,'и играет ноликами "0" ')
+
