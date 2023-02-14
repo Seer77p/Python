@@ -8,7 +8,7 @@
 # a) Добавьте игру против бота
 # b) Подумайте как наделить бота ""интеллектом""
 from random import randint
-from funk import *
+from funk_candies import *
 
 
 game_mode_selection = int(game_mode())

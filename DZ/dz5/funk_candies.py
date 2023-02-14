@@ -1,4 +1,6 @@
+#функции для конфет
 from random import randint
+
 
 maxi = 28
 victory_number = 57
@@ -118,18 +120,6 @@ def base_game_computer_difficult_level(player, candies):
             print('Игрок взял ', quantity, 'конфет',
                   'осталось = ', candies)
 
-
-def board_play(board):
-    size=3
-    print('Поле игры крестики нолики\n и номера для заполнения\n      пустых клеток')
-    print('     ','-'*13)
-    for i in range(size):
-        print('      |', board[0+i*3], '|', board[1+i*3],'|',board[2+i*3],'|')
-        print('     ','-'*13)
-
-def sequence(temp):
-       temp = randint(0, 1)
-       return temp
 
 
 if __name__ == '__main__':  # усли в качестве импорта не будт запускаться
