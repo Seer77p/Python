@@ -94,29 +94,37 @@ print()
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 # Пример:
 # - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
-list_size_3_5 = int(input('Введите количество чисел Фибоначи: '))
-while list_size_3_5 == 0:
-    print('Введенное количество', list_size_3_5, 'не предполагает расчет')
-    list_size_3_5 = int(input('Введите количество чисел Фибоначи: '))
-spisok_3_5 = [0]*(list_size_3_5*2+1)
-spisok_3_5[list_size_3_5+1] = 0
-positive = [0]*(list_size_3_5)
-negative = [0]*(list_size_3_5)
-for i in range(list_size_3_5):
-    if i > 1:
-        positive[i] = positive[i-2]+positive[i-1]
-        negative[i] = negative[i-2]-negative[i-1]
-    if i == 0:
-        positive[i] = 1
-        negative[i] = 1
-    if i == 1:
-        positive[i] = 0+positive[i-1]
-        negative[i] = 0-negative[i-1]
-for i in range(list_size_3_5):
-    spisok_3_5[i] = negative[(list_size_3_5-1)-i]
-    spisok_3_5[i+list_size_3_5+1] = positive[i]
-print(spisok_3_5, end=' ')
-print()
+# list_size_3_5 = int(input('Введите количество чисел Фибоначи: '))
+# while list_size_3_5 == 0:
+#     print('Введенное количество', list_size_3_5, 'не предполагает расчет')
+#     list_size_3_5 = int(input('Введите количество чисел Фибоначи: '))
+# spisok_3_5 = [0]*(list_size_3_5*2+1)
+# spisok_3_5[list_size_3_5+1] = 0
+# positive = [0]*(list_size_3_5)
+# negative = [0]*(list_size_3_5)
+# for i in range(list_size_3_5):
+#     if i > 1:
+#         positive[i] = positive[i-2]+positive[i-1]
+#         negative[i] = negative[i-2]-negative[i-1]
+#     if i == 0:
+#         positive[i] = 1
+#         negative[i] = 1
+#     if i == 1:
+#         positive[i] = 0+positive[i-1]
+#         negative[i] = 0-negative[i-1]
+# for i in range(list_size_3_5):
+#     spisok_3_5[i] = negative[(list_size_3_5-1)-i]
+#     spisok_3_5[i+list_size_3_5+1] = positive[i]
+# print(spisok_3_5, end=' ')
+# print()
+
+fibo = [1, 0, 1]
+for i in range(10):
+    next_ = fibo[-1] + fibo[-2]
+    fibo.append(next_)
+    prev_ = fibo[1] - fibo[0]
+    fibo.insert(0, prev_)
+print(fibo)
 
 # dz-3.6
 # Задача 16: Требуется вычислить, сколько раз встречается некоторое
