@@ -29,7 +29,7 @@ def verse_check(phrase):
         return print('C ритмом во фразе не порядок -  Пам парам')
 
 
-def main():
+def main_vini():
     verse_check(text_reading(0))
     verse_check(text_reading(1))
     verse_check(text_reading(2))
